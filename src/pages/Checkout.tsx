@@ -48,15 +48,6 @@ const Checkout = () => {
     }
 
     const whatsappMessage = generateWhatsAppMessage();
-     const itensFormatados = itens.join(', ');
-  return encodeURIComponent(`Olá! Você pediu: ${itensFormatados}. O valor total ficou R$ ${valorTotal.toFixed(2)}. Qualquer dúvida, estou à disposição!`);
-}
-
-// Exemplo de uso:
-const pedido = ['Corte de cabelo', 'Barba'];
-const total = 75.00;
-
-const whatsappMessage = generateWhatsAppMessage(pedido, total);
     const whatsappUrl = `https://wa.me/${5551997652633}?text=${whatsappMessage}`;
     
     window.open(whatsappUrl, '_blank');
